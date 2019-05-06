@@ -2,8 +2,11 @@
 public class LRUsample {
 
 	public static void main(String[] args) {
-		System.out.println("First Commit");
-		System.out.println("branch test");
+		// インスタンス作成
+		LRU lru = new LRU();
+		// データ入力
+		lru.input("a", "dataA");
+		// データ取得
+		lru.get("a");
 	}
-
 }
