@@ -5,7 +5,9 @@ public class LRUsample {
 		// インスタンス作成
 		LRU lru = new LRU();
 		// データ入力
-		lru.input("a", "dataB");
+		lru.input("a", "dataA");
+		lru.input("b", "dataB");
+		lru.input("c", "dataC");
 		// データ取得
 		lru.get("a");
 	}
