@@ -21,10 +21,10 @@ public class LRUsample {
 		// ２つ目のLRUインスタンス作成
 		LRU lru2 = new LRU();
 		// データ操作
-		lru.put("a", "dataA");
-		lru.put("b", "dataB");
-		lru.get("a");
-		lru.put("c", "dataC");
-		lru.get("b");
+		lru2.put("a", "dataA");
+		lru2.put("b", "dataB");
+		lru2.get("a");
+		lru2.put("c", "dataC");
+		lru2.get("b");
 	}
 }
