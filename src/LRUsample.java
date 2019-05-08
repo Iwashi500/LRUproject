@@ -1,14 +1,30 @@
+/*
+ * メインクラス
+ * */
 
 public class LRUsample {
 
 	public static void main(String[] args) {
-		// インスタンス作成
+
+		System.out.println("test1");
+
+		// LRUインスタンス作成
 		LRU lru = new LRU();
-		// データ入力
-		lru.input("a", "dataA");
-		lru.input("b", "dataB");
-		lru.input("c", "dataC");
-		// データ取得
+		// データ操作
+		lru.put("a", "dataA");
+		lru.put("b", "dataB");
+		lru.put("c", "dataC");
 		lru.get("a");
+
+		System.out.println("test2");
+
+		// ２つ目のLRUインスタンス作成
+		LRU lru2 = new LRU();
+		// データ操作
+		lru.put("a", "dataA");
+		lru.put("b", "dataB");
+		lru.get("a");
+		lru.put("c", "dataC");
+		lru.get("b");
 	}
 }
