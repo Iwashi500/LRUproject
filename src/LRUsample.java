@@ -1,30 +1,30 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
 /*
  * メインクラス
  * */
 
 public class LRUsample {
 
-	public static void main(String[] args) {
+	private LRU lru = new LRU();
 
-		System.out.println("test1");
+	// 入出力のテスト
+	@Test
+	public void 入出力テスト() throws Exception {
+		assertEquals("dataA", lru.入出力テスト());
+	}
 
-		// LRUインスタンス作成
-		LRU lru = new LRU();
-		// データ操作
-		lru.put("a", "dataA");
-		lru.put("b", "dataB");
-		lru.put("c", "dataC");
-		lru.get("a");
+	// 一つ目のテスト
+	@Test
+	public void Test1() throws Exception {
+		assertEquals("null", lru.TestLRU1());
+	}
 
-		System.out.println("test2");
-
-		// ２つ目のLRUインスタンス作成
-		LRU lru2 = new LRU();
-		// データ操作
-		lru2.put("a", "dataA");
-		lru2.put("b", "dataB");
-		lru2.get("a");
-		lru2.put("c", "dataC");
-		lru2.get("b");
+	// 二つ目のテスト
+	@Test
+	public void Test2() throws Exception {
+		assertEquals("null", lru.TestLRU2());
 	}
 }
